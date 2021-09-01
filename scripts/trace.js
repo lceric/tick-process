@@ -18,5 +18,14 @@ $(function () {
   })
 
   tickProcessIns.init()
-  tickProcessIns.play()
+
+  $('#play').on('click', function (e) {
+    console.log(tickProcessIns.playing)
+    if (tickProcessIns.playing) {
+
+      tickProcessIns.pause()
+      return
+    }
+    tickProcessIns.play()
+  })
 })
